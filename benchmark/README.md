@@ -61,9 +61,17 @@ Distributed implementation of Futamura-Aluru-Kurtz (2001) and pDC3 (2006).
 
 ## Benchmarking
 
-SOTA: FAS2015, pSAscan
+| Parallel Algo. | Sequential Ver. | Parallel Impl. | Paper comparison |
+|:---:|:---:|:---:|:---:|
+| pDC3 (2006) | DC3 (2003) | [parallelKS](https://github.com/cmuparlay/pbbsbench/tree/master/benchmarks/suffixArray/parallelKS), [cloudSACA](https://github.com/aametwally/cloudSACA), [hammerlab](https://github.com/hammerlab/suffix-arrays/blob/master/src/main/scala/org/hammerlab/suffixes/pdc3/PDC3.scala) | [see parDivSufSort] |
+| parRange (2017) | Larsson-Sadakane (2003) | [paralleRange](https://github.com/cmuparlay/pbbsbench/tree/master/benchmarks/suffixArray/parallelRange) | [see parDivSufSort] |
+| parDivSufSort (2017) | DivSufSort (2008) | [SDSL integrated](https://github.com/simongog/sdsl-lite/compare/master...jlabeit:sdsl-lite:parallel_sdsl) | parDivSufSort > pDC3 > parRange > pSAscan (conflicted result) |
+| Futamura-Aluru-Kurtz (2001) | - | [cloudSACA](https://github.com/aametwally/cloudSACA) | FAK2001 (cloudSACA) > pDC3 |
+| pSAscan (2015) | SAscan (2014) | [pSAscan](https://www.cs.helsinki.fi/group/pads/pSAscan.html) | pSAscan (internal memory) > pDC3, pSAscan (external memory) > ESAIS |
+| PSAC (2015) | - | [PSAC](https://github.com/patflick/psac) | PSAC > FAK2001 (cloudSACA) |
+| CaPS-SA (2024) | - | [CaPS-SA](https://github.com/jamshed/CaPS-SA) | CaPS-SA > pDC3 > parDivSufSort (conflicted result) |
+| DCX (2024) | DC3 (2003) | - | DC21 > PSAC |
 
-TODO: FA2015, FAK (cloudSACA), pSAscan, parDss, pDC3
 
 ## Related
 
